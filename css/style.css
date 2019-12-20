@@ -1,7 +1,24 @@
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Ma Shan Zheng', cursive;
+*/
+:root{
+  /* colours generator on https://coolors.co/browser/latest/1*/
+  --text-gray: #393D3F;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --white: #ffffff;
+  --midnight: #104f55;
+  
+  /* gradient colours using webgradients.com to generate it*/
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
 html,body{
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
  a{
@@ -20,13 +37,35 @@ ul{
   background: white;
   padding: 0 2rem;
   height: 0rem;
-  min-height: 40vh;
+  min-height: 10vh;
   overflow: hidden;
 }
 .nav .nav-menu{
   justify-content: space-between;
 }
 
+.nav .toggle-collapse{
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+.nav .toggle-collapse .toggle-icons{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+
+.collapse{
+  height: 30rem;
+
+}
 .nav .nav-items{
   display: flex;
   margin: 0;
@@ -38,13 +77,59 @@ ul{
   position: relative;
 }
 
+.nav .nav-items .nav-link:hover{
+  background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+  color:var(--white);
+}
 .nav .nav-brand a{
   font-size: 1.6rem;
   padding: 1rem 0;
   text-decoration: none;
   display: block;
+  font-family: 'Ma Shan Zheng', cursive;
+  text-transform: uppercase;
+  color: var(--text-gray);
 }
-
+.nav-link a{
+  color: var(--text-gray);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+}
 nav .social{
   padding: 1.4rem 0;
+}
+
+.nav .social i{
+  padding: 0 .2rem;
+  color: var(--text-gray);
+  font-size: 1.2rem;
+}
+
+.nav .social i:hover{
+  color: #a1c4cf;
+}
+
+/* ===== main ===== */
+
+main .site-title{
+  height: 110vh;
+  background-image: url('http://placeimg.com/640/480/arch');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+.nav .nav-menu,.nav .nav-items{
+  flex-direction: column;
+}
+
+.nav .toggle-collapse{
+  display: initial;
+}
 }

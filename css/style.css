@@ -34,6 +34,8 @@ ul{
  }
  /* ============ nav ====== */
 .nav{
+  width: 95%;
+  position: fixed;
   background: white;
   padding: 0 2rem;
   height: 0rem;
@@ -183,6 +185,26 @@ main .blog-post .blog-content{
   margin: 3rem 2rem;
   box-shadow: 0 15px 20px rgba(0,0,0,0.2);
 }
+
+main .blog-content .blog-title{
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+  padding: .7rem 2rem;
+  background: var(--sky);
+  margin: .5rem;
+}
+main span{
+  display: block;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 768px){
 .nav .nav-menu,.nav .nav-items{
   flex-direction: column;

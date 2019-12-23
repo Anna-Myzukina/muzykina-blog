@@ -41,6 +41,7 @@ ul{
   height: 0rem;
   min-height: 10vh;
   overflow: hidden;
+  z-index: 20;
 }
 .nav .nav-menu{
   justify-content: space-between;
@@ -200,7 +201,12 @@ main span{
 }
 
 
-
+section .container .owl-nav{
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+}
 
 
 
